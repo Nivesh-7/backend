@@ -4,7 +4,7 @@ from flask_cors import CORS
 app = Flask(__name__)
 CORS(app)
 
-@app.route('/bfhl', methods=['POST'])
+@app.route('/api/bfhl', methods=['POST'])
 def handle_post():
     data = request.json.get('data', [])
     numbers = [item for item in data if item.isdigit()]
